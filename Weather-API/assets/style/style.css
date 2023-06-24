@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700;300;200;100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(45deg, #EEF9BF, #A7E9AF, #75B79E, #6A8CAF);
+}
+
+#main {
+    color: white;
+    background-image: linear-gradient(to bottom, #1D1CE5, #4649FF, #7978FF, #C47AFF);
+    height: max-content;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    margin-top: 5%;
+    align-items: center;
+    padding: 15px;
+    font-family: 'Ubuntu', monospace, Arial, Helvetica, sans-serif;
+    box-shadow: 5px 5px 13px #0000005e;
+    border-radius: 5px;
+}
+
+#city-input {
+    color: black;
+    background-color: white;
+    text-transform: capitalize;
+    border: 2px solid white;
+    border-radius: 3px;
+    width: 250px;
+    height: 35px;
+    margin-right: 0;
+    padding: 5px;
+    font-size: 1.1em;
+}
+
+#city-input:focus-visible {
+    outline: none;
+}
+
+#send-info {
+    margin-bottom: 45px;
+}
+
+#btn {
+    border: none;
+    padding: 5px;
+    height: 50px;
+    font-size: 1.1em;
+    border-radius: 3px;
+    width: 80px;
+    background-color: #2793ff;
+    color: white;
+}
+
+#base-info {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    position: static;
+}
+
+#city-name {
+    font-size: 2em;
+    padding-top: 0;
+    margin-right: 25px;
+    font-weight: 200;
+}
+
+#weather {
+    font-size: 1.6em;
+    font-weight: 300;
+    margin-left: 30%;
+    margin-bottom: 25px;
+}
+
+#humidity-wind {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+#humidity {
+    padding-right: 50px;
+}
+
+#humidity-text i {
+    padding-right: 10px;
+}
+
+#wind-text i {
+    padding-right: 10px;
+}
+
+#weather-description {
+    display: flex;
+    margin-top: 50px;
+}
+
+#weather-description-text {
+    text-transform: capitalize;
+    font-size: 1.5em;
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+#weather-icon {
+    width: 70px;
+}
+
+#hidden {
+    display: none;
+}
+
+.api-info {
+    display: block;
+}
+
+#btn:hover {
+    cursor: pointer;
+    background-color: #4794b8;
+}
+
+#error {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: red;
+    text-decoration: underline;
+}

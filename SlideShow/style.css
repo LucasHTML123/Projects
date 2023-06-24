@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #DBDFAA, #B3C890, #73A9AD);
+}
+
+img {
+    width: 500px;
+    height: 300px;
+    background-color: transparent;
+}
+
+.container {
+    position: relative;
+    top: 18vh;
+    left: 33vw;
+    background-color: white;
+    width: 500px;
+    height: 300px;
+}
+
+div#radio {
+    position: absolute;
+    top: 280px;
+    left: 220px;
+}

@@ -1,0 +1,174 @@
+/* Color-Pallete link -> https://colorhunt.co/palette/344d676eccafade792f3ecb0 */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', monospace, Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #24252A;
+    box-shadow: 1px 4px 12px #00000073;
+}
+
+#title {
+    color: #ADE792;
+    padding-left: 50px;
+    font-size: 50px;
+}
+
+#options {
+    display: flex;
+    align-items: right;
+    color: white;
+    padding-right: 100px;
+}
+
+#options a {
+    padding-right: 25px;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+#options a:hover {
+    color: #6ECCAF;
+}
+
+#main {
+    height: 100vh;
+    display: flex;
+}
+
+#playing {
+    background-color: #24252A;
+    color: white;
+    text-align: center;
+    width: 300px;
+    height: 100%;
+    box-shadow: 6px 7px 9px #00000045, inset 1px 4px 12px #00000073;
+    overflow: hidden;
+}
+
+#playing-text {
+    margin-top: 55px;
+    font-size: 20px;
+}
+
+#playing-text p {
+    padding-bottom: 15px;
+}
+
+#playing-text ul li {
+    text-decoration: 1px solid whitesmoke underline;
+}
+
+#music-image {
+    width: 200px;
+    border-radius: 5px;
+    margin-top: 70px;
+}
+
+#music-list {
+    width: 100vw;
+    height: 100vh;
+    background-color: #24252A;
+    color: white;
+    box-shadow: inset 1px 4px 12px #00000073;
+    padding-left: 50px;
+    border: none;
+}
+
+#music-list img {
+    width: 200px;
+    height: 200px;
+    border: none;
+    border-radius: 15px;
+}
+
+#music-list button {
+    border: none;
+    overflow: none;
+    background-color: transparent;
+}
+
+#music-list button:hover {
+    cursor: pointer;
+}
+
+#developer-musics {
+    margin-top: 50px;
+}
+
+#developer-musics > p {
+    padding-bottom: 15px;
+}
+
+.musics {
+    margin-left: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.listen p {
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.listen:hover p {
+    color: #6ECCAF;
+}
+
+#controls {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    width: 100vw;
+    padding: 20px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#music-info {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+
+#music-info p#music-title {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+#music-info p#time {
+    margin-left: 25px;
+}
+
+#small-music-image {
+    width: 50px;
+    margin-right: 10px;
+}
+
+#icons {
+    padding: 10px;
+    background-color: white;
+    border-radius: 50%;
+    color: #28588b;
+}
+
+#icons:hover {
+    cursor: pointer;
+    color: #113458;
+}

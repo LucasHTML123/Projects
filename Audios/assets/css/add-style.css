@@ -1,0 +1,112 @@
+/* Color-Pallete link -> https://colorhunt.co/palette/344d676eccafade792f3ecb0 */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', monospace, Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #24252A;
+}
+
+#title {
+    color: #ADE792;
+    padding-left: 50px;
+    font-size: 50px;
+}
+
+
+#options {
+    display: flex;
+    align-items: right;
+    color: white;
+    padding-right: 100px;
+}
+
+#options a {
+    padding-right: 25px;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+#options a:hover {
+    color: #6ECCAF;
+}
+
+#main {
+    height: 100vh;
+    background-color: #24252A;
+    box-shadow: inset 1px 4px 12px #00000073;
+    margin-bottom: 50px;
+    overflow-y: auto;
+}
+
+div#send-files {
+    width: 450px;
+    height: 300px;
+    border: 2px dashed gray;
+    margin: 5% auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#input-file {
+    display: none;
+}
+
+#controls {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    width: 100vw;
+    padding: 4px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#music-info {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+
+#music-info p#music-title {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+#music-info p#time {
+    margin-left: 25px;
+}
+
+#small-music-image {
+    width: 50px;
+    margin-right: 10px;
+}
+
+#icons {
+    padding: 10px;
+    background-color: white;
+    border-radius: 50%;
+    color: #28588b;
+}
+
+#icons:hover {
+    cursor: pointer;
+    color: #113458;
+}

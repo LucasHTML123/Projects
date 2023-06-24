@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <script src="https://kit.fontawesome.com/c9a62afcaf.js" crossorigin="anonymous"></script>    <title>Weather App</title>
+</head>
+<body>
+    <div id="main">
+        <div id="send-info">
+            <input type="text" id="city-input" placeholder="Write the city name: ">
+            <button id="btn">Send</button>
+            <p id="error"></p>
+        </div>
+        <div class="api-info" id="hidden">
+            <div id="base-info">
+                <h3 id="city-name">Mafra</h2>
+                <img src="https://flagsapi.com/BR/flat/32.png" id="country-flag"></img>
+            </div>
+            <div id="weather-info-hidden">
+                <p id="weather">30&deg;C</p>
+                <div id="humidity-wind">
+                    <div id="humidity">
+                        <p id="humidity-text"><i class="fa-solid fa-droplet"></i>70%</p>
+                    </div>
+                    <div id="wind">
+                        <p id="wind-text"><i class="fa-solid fa-wind"></i>6km/h</p>
+                    </div>
+                </div>  
+                <div id="weather-description">
+                    <p id="weather-description-text">Raining</p>
+                    <img id="weather-icon" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-description">       
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

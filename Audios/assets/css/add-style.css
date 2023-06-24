@@ -23,6 +23,11 @@
     font-size: 50px;
 }
 
+#main {
+    height: 100vh;
+    background-color: #24252A;
+    box-shadow: inset 1px 4px 12px #00000073;
+}
 
 #options {
     display: flex;
@@ -42,27 +47,75 @@
     color: #6ECCAF;
 }
 
-#main {
-    height: 100vh;
-    background-color: #24252A;
-    box-shadow: inset 1px 4px 12px #00000073;
-    margin-bottom: 50px;
-    overflow-y: auto;
+.outline {
+    border: 2px dashed #55585f !important;
 }
 
-div#send-files {
-    width: 450px;
-    height: 300px;
-    border: 2px dashed gray;
-    margin: 5% auto;
-    text-align: center;
+#send-files {
     display: flex;
     flex-direction: column;
+    border: 1px dashed #3f4147;
+    width: 40vw;
+    color: white;
+    text-align: center;
+    margin: 5vh auto;
+    font-size: 18px;
+    padding: 15px 50px;
+}
+
+
+#send-files:hover {
     cursor: pointer;
+    border: 1px dashed #55585f;
+}
+
+.svgs {
+    margin: 20px 0px;
+}
+
+.shown {
+    display: block;
+}
+
+.unshown {
+    display: none;
 }
 
 #input-file {
     display: none;
+    position: absolute;
+}
+
+#music-upload-list-container {
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#music-upload-list {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+#music-upload-list p {
+    padding-left: 15px;
+}
+
+#send {
+    width: 15%;
+    margin: auto;
+    border: none;
+    background-color: #6ECCAF;
+    padding: 10px;
+    border-radius: 15px;
+    display: block;
+    transition: all .5s ease;
+}
+
+#send:hover {
+    cursor: pointer;
+    background-color: #28588b;
+    color: wheat;
 }
 
 #controls {
@@ -71,7 +124,7 @@ div#send-files {
     bottom: 0;
     background-color: black;
     width: 100vw;
-    padding: 4px;
+    padding: 20px;
     color: white;
     justify-content: center;
     align-items: center;

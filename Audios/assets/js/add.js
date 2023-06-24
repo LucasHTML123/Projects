@@ -1,33 +1,30 @@
-// Declaring all the consts
+// Make the click open the select file window
+const fileInputBox = document.querySelector('#send-files')
 const fileInput = document.querySelector('#input-file')
-const fileDragBox = document.querySelector('#send-files')
 
-// When the user clicks the drag container
-// open the "select file window"
-fileDragBox.addEventListener('click', () => {
+fileInputBox.addEventListener('click', () => {
     fileInput.click()
 })
 
-// Create all the drag events
-fileDragBox.addEventListener('dragover', e => {
+fileInputBox.addEventListener('dragover', e => {
+    e.preventDefault(); // Evita o comportamento padrão do navegador
+    fileInputBox.classList.add('outline');
+});
+
+fileInputBox.addEventListener('dragenter', e => {
+    fileInputBox.classList.add('outline')
     e.preventDefault()
-    fileDragBox.style.border = '2px dashed blue'
 })
 
-fileDragBox.addEventListener('dragenter', e => {
-    e.preventDefault()
-    fileDragBox.style.border = '2px dashed blue'
+fileInputBox.addEventListener('dragleave', () => {
+    fileInputBox.classList.remove('outline')
 })
 
-fileDragBox.addEventListener('dragleave', e => {
+fileInputBox.addEventListener('drop', e => {
     e.preventDefault()
-    fileDragBox.style.border = '2px dashed gray'
-})
-
-// Make the drop event work
-fileDragBox.addEventListener('drop', e => {
-    e.preventDefault()
-    
-    const fileData = e.dataTransfer.files[0]
-    console.log(fileData)
+    const data = e.dataTransfer.files[0]
+    console.log(data, data.name, data.type)
+    fileInputBox.classList.remove('outline')
+    const fileName = data.name
+    return fileName
 })

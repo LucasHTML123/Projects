@@ -54,19 +54,19 @@
 #send-files {
     display: flex;
     flex-direction: column;
-    border: 1px dashed #3f4147;
+    border: 2px dashed #3f4147;
     width: 40vw;
     color: white;
     text-align: center;
     margin: 5vh auto;
     font-size: 18px;
     padding: 14px 50px;
+    transition: border .19s linear;
 }
-
 
 #send-files:hover {
     cursor: pointer;
-    border: 1px dashed #55585f;
+    border: 2px dashed #55585f;
 }
 
 .svgs {
@@ -116,6 +116,11 @@
     cursor: pointer;
     background-color: #28588b;
     color: wheat;
+}
+
+.actual {
+    color: #ADE792 !important;
+    cursor: default;
 }
 
 #controls {

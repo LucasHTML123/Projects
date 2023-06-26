@@ -1,30 +1,66 @@
-// Make the click open the select file window
+// Discover Operational System
+window.addEventListener('load', () => {
+    const SO = navigator.userAgent
+    if (SO.indexOf('Win') !== -1) win()
+    if (SO.indexOf('Win') === -1) linux()
+})
+
+// Necessary variables / conts.
 const fileInputBox = document.querySelector('#send-files')
 const fileInput = document.querySelector('#input-file')
 
-fileInputBox.addEventListener('click', () => {
-    fileInput.click()
-})
 
-fileInputBox.addEventListener('dragover', e => {
-    e.preventDefault(); // Evita o comportamento padrão do navegador
-    fileInputBox.classList.add('outline');
-});
+function win() {
+    // Make the archive selector open
+    fileInputBox.addEventListener('click', () => {
+        fileInput.click()
+        return
+    })    
 
-fileInputBox.addEventListener('dragenter', e => {
-    fileInputBox.classList.add('outline')
-    e.preventDefault()
-})
+    fileInputBox.addEventListener('dragover', e => {
+        e.preventDefault(); // Evita o comportamento padrão do navegador
+        fileInputBox.classList.add('outline');
+    });
+    
+    fileInputBox.addEventListener('dragenter', e => {
+        e.preventDefault()
+        fileInputBox.classList.add('outline')
+    })
+    
+    fileInputBox.addEventListener('dragleave', () => {
+        fileInputBox.classList.remove('outline')
+        e.preventDefault()
+    })
+    
+    fileInputBox.addEventListener('drop', e => {
+        e.preventDefault()
+        const data = e.dataTransfer.files[0]
+        fileInputBox.classList.remove('outline')
+        const fileName = data.name
+        return fileName
+    })
+}
 
-fileInputBox.addEventListener('dragleave', () => {
-    fileInputBox.classList.remove('outline')
-})
+function linux () {
+    // Make the archive selector open
+    fileInputBox.addEventListener('click', () => {            
+        fileInput.click()
+        return
+    })        
+    // Hide the elements
+    document.querySelector('.svgs').classList.remove('shown')
+    document.querySelector('.svgs').classList.add('unshown')
 
-fileInputBox.addEventListener('drop', e => {
-    e.preventDefault()
-    const data = e.dataTransfer.files[0]
-    console.log(data, data.name, data.type)
-    fileInputBox.classList.remove('outline')
-    const fileName = data.name
-    return fileName
-})
+    fileInput.addEventListener('change', e => {
+        const text = document.querySelector('.text')
+        const file = e.target.files[0]
+        const fileType = file.type
+        if (fileType !== 'audio/mpeg') return alert('Favor selecionar um arquivo de aúdio .mp3!')
+        const fileName = file.name
+        const i = document.createElement('i')
+        i.classList.add('fa-solid', 'fa-file-audio', 'fa-2xl')
+        i.style.lineHeight = '1'
+        fileInputBox.insertBefore(i, text)
+        text.innerText = fileName
+    })
+}

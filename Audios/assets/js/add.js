@@ -37,7 +37,12 @@ function win() {
         const data = e.dataTransfer.files[0]
         fileInputBox.classList.remove('outline')
         const fileName = data.name
+        console.log(data)
         return fileName
+    })
+
+    fileInput.addEventListener('change', e => {
+        console.log(e.target.files[0])
     })
 }
 
@@ -67,8 +72,18 @@ function linux () {
         handleEvent(file, fileName)
     })
 
-    function handleEvent (file, filename) {
+    function handleEvent (file) {
+        localStorage.setItem('musics', [])
         const url = URL.createObjectURL(file)
-        localStorage.setItem(filename, url)
+        const music = {
+            path: url
+        }
+        // Antes de adicionar a música no localStorage, copiar o que já tinha e colocar no novo
+        let musicsArray = []
+        if (localStorage.getItem('musics') !== null && localStorage.getItem('musics').length === 0) {
+            localStorage.removeItem('musics')
+            musicsArray.push(JSON.stringify(music))
+            localStorage.setItem('musics', musicsArray)
+        }
     }
 }
